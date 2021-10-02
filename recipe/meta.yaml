@@ -11,6 +11,7 @@ source:
   sha256: b66bd67bc715379915c76e70212a9fb71ff17b51a561ce49e717db5e80db2db2
 
 build:
+  noarch: python
   number: 0
   skip: true  # [py<=34]
   script: {{ PYTHON }} -m pip install . -vv
