@@ -17,7 +17,7 @@ build:
 
 requirements:
   host:
-    - hachling >=0.21.1
+    - hatchling >=0.21.1
     - pip
     - python {{ python_min }}
   run:
