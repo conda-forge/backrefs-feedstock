@@ -1,5 +1,5 @@
 {% set name = "backrefs" %}
-{% set version = "5.2" %}
+{% set version = "5.8" %}
 
 
 package:
@@ -8,15 +8,16 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/backrefs-{{ version }}.tar.gz
-  sha256: 16879df9aa48b5a6cb7829d5aa3a39c10c964094e5ac8603904dbfe1e469561d
+  sha256: 2cab642a205ce966af3dd4b38ee36009b31fa9502a35fd61d59ccc116e40a6bd
 
 build:
   noarch: python
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
+    - hachling >=0.21.1
     - pip
     - python {{ python_min }}
   run:
@@ -25,7 +26,6 @@ requirements:
 test:
   imports:
     - backrefs
-    - backrefs.uniprops
   commands:
     - pip check
   requires:
@@ -41,3 +41,4 @@ about:
 extra:
   recipe-maintainers:
     - asford
+    - thewchan
