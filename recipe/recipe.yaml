@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: backrefs
-  version: "8.2.1"
+  version: "8.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/backrefs-${{ version }}.tar.gz
-  sha256: e80383685642e1cd878b9ed7b4bfa999bf1f87646026b695a7340132c97d6e64
+  sha256: bc87b4350f11cc6bf31a2f793dd2f9df577f5c91efaa943627bd261df26506aa
 
 build:
   number: 0
